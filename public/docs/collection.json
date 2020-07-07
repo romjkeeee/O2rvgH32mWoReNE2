@@ -1,0 +1,418 @@
+{
+    "variables": [],
+    "info": {
+        "name": "Laravel API",
+        "_postman_id": "2a08e58b-6c54-400c-b7ba-e8a2992ec58b",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "description": "\nAPIs for",
+            "item": [
+                {
+                    "name": "Login user and create token",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8888\/bewarted\/blog\/public\/",
+                            "path": "api\/auth\/login",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"rem\",\n    \"password\": \"expedita\",\n    \"remember_me\": true\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Create user",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8888\/bewarted\/blog\/public\/",
+                            "path": "api\/auth\/signup",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"sit\",\n    \"email\": \"voluptatem\",\n    \"password\": \"et\",\n    \"password_confirmation\": \"aspernatur\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Logout user (Revoke the token)",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8888\/bewarted\/blog\/public\/",
+                            "path": "api\/auth\/logout",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Get the authenticated User",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8888\/bewarted\/blog\/public\/",
+                            "path": "api\/auth\/user",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Categories",
+            "description": "\nAPIs for",
+            "item": [
+                {
+                    "name": "Category list",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8888\/bewarted\/blog\/public\/",
+                            "path": "api\/categories",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Favorite Posts",
+            "description": "\nAPIs for",
+            "item": [
+                {
+                    "name": "Favorite posts list",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8888\/bewarted\/blog\/public\/",
+                            "path": "api\/user\/favorite",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Add to Favorite",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8888\/bewarted\/blog\/public\/",
+                            "path": "api\/user\/favorite",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"post_id\": 4\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Remove from Favorite",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8888\/bewarted\/blog\/public\/",
+                            "path": "api\/user\/favorite\/:favorite",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Posts",
+            "description": "\nAPIs for",
+            "item": [
+                {
+                    "name": "List posts",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8888\/bewarted\/blog\/public\/",
+                            "path": "api\/posts",
+                            "query": [
+                                {
+                                    "key": "user_id",
+                                    "value": "reiciendis",
+                                    "description": "integer id \u0430\u0432\u0442\u043e\u0440\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "category_id",
+                                    "value": "error",
+                                    "description": "integer id \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Show post",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8888\/bewarted\/blog\/public\/",
+                            "path": "api\/posts\/:post",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User Posts",
+            "description": "\nAPIs for",
+            "item": [
+                {
+                    "name": "List of user posts",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8888\/bewarted\/blog\/public\/",
+                            "path": "api\/user\/posts",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Create post",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8888\/bewarted\/blog\/public\/",
+                            "path": "api\/user\/posts",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"asperiores\",\n    \"text\": \"sed\",\n    \"category_id\": \"inventore\",\n    \"image\": \"atque\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Delete post",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8888\/bewarted\/blog\/public\/",
+                            "path": "api\/user\/posts\/:post",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        }
+    ]
+}
